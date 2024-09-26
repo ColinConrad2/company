@@ -17,4 +17,21 @@ class AboutPageView(TemplateView):
         context["contact_address"] = "123 Main Street"
         context["phone_number"] = "555-555-5555"
         return context
+    
+#Assignment Add-Ons from this point
+
+class ProductsPageView(TemplateView):
+    template_name = "products.html"
+
+    def get_context_data(self, **kwargs):           #just gonna shdow about page creation exactly
+        context = super().get_context_data(**kwargs)
+        #Context and added 4 products
+        #So i guess products should be here
+        context['products'] = [
+            "guns",
+            "cars",
+            "money",
+            "tigers"
+        ]
+        return context  #oh yeah gotta actually return the context
 # Create your views here.

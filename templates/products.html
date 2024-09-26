@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <h1>Our Products</h1>
+  <ul>
+    {% for product in products %}
+      <li>{{ product }}</li>
+    {% endfor %}
+  </ul>
+{% endblock %}
+
+{% comment %}I am extreamly bad at html so I had to get help with this{% endcomment %}
